@@ -8,21 +8,19 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- Logo -->
+    <link rel="icon" href="{{ asset('images/logoalfa.png') }}" type="image/png" sizes="16x16" />
+
+
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
 
-    {{-- Style --}}
-    <style>
-        .gradient {
-            background: linear-gradient(90deg, #064e3b 0%, #22c55e 100%);
-        }
-    </style>
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
 
-<body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+<body class="leading-normal tracking-normal text-white bg-gradient-to-r from-emerald-800 to-green-600" style="font-family: 'Source Sans Pro', sans-serif;">
     <!--Nav-->
     <nav id="header" class="fixed top-0 z-30 w-full text-white shadow-md shadow-emerald-400">
         <div class="container flex flex-wrap items-center justify-between w-full py-2 mx-auto mt-0">
@@ -32,7 +30,7 @@
                     <!--Icon from: http://www.potlabicons.com/ -->
                     <img class="w-16 transition duration-300 transform hover:scale-105"
                         src="{{ asset('images/logoalfa2.png') }}" alt="logoalfa">
-                        <span class="p-1"></span>
+                    <span class="p-1"></span>
                     <span>
                         SMP Al Musyaffa'
                     </span>
@@ -64,7 +62,8 @@
                     </li>
                 </ul>
                 <a id="navAction"
-                    class="px-8 py-4 mx-auto mt-4 font-bold text-gray-800 transition duration-300 ease-in-out transform bg-white rounded-full shadow opacity-75 lg:mx-0 hover:underline lg:mt-0 focus:outline-none focus:shadow-outline hover:scale-105" href="{{ route('login') }}">
+                    class="px-8 py-4 mx-auto mt-4 font-bold text-gray-800 transition duration-300 ease-in-out transform bg-white rounded-full shadow opacity-75 lg:mx-0 hover:underline lg:mt-0 focus:outline-none focus:shadow-outline hover:scale-105"
+                    href="{{ route('login') }}">
                     Masuk
                 </a>
             </div>
@@ -84,7 +83,8 @@
                     Pendaftaran Santri Baru Tahun Ajaran 2023 / 2024 Belum Mulai, Silahkan Download Brosur Berikut
                 </p>
                 <a href="{{ asset('images/brosur.jpg') }}"
-                    class="px-8 py-4 mx-auto my-6 font-bold text-gray-800 transition duration-300 ease-in-out transform bg-white rounded-full shadow-lg lg:mx-0  focus:outline-none focus:shadow-outline hover:scale-105 cursor-pointer" download="brosur-smp-al-musyaffa">
+                    class="px-8 py-4 mx-auto my-6 font-bold text-gray-800 transition duration-300 ease-in-out transform bg-white rounded-full shadow-lg lg:mx-0  focus:outline-none focus:shadow-outline hover:scale-105 cursor-pointer"
+                    download="brosur-smp-al-musyaffa">
                     Download
                 </a>
             </div>
@@ -124,7 +124,7 @@
                 Jadwal Pendaftaran
             </h2>
             <div class="w-full mb-4">
-                <div class="h-1 py-0 mx-auto my-0 rounded-t opacity-25 w-72 gradient"></div>
+                <div class="h-1 py-0 mx-auto my-0 rounded-t opacity-25 w-72 bg-gradient-to-r from-[#064e3b] to-[#22c55e]"></div>
             </div>
             <div class="flex flex-wrap justify-center p-2">
                 <div class="w-5/6 sm:w-1/2">
@@ -595,7 +595,9 @@
             if (scrollpos > 10) {
                 header.classList.add("bg-white");
                 navaction.classList.remove("bg-white");
-                navaction.classList.add("gradient");
+                navaction.classList.add("bg-gradient-to-r");
+                navaction.classList.add("from-emerald-700");
+                navaction.classList.add("to-green-600");
                 navaction.classList.remove("text-emerald-700");
                 navaction.classList.add("text-white");
                 //Use to switch toggleColour colours
@@ -608,7 +610,9 @@
                 navcontent.classList.add("bg-white");
             } else {
                 header.classList.remove("bg-white");
-                navaction.classList.remove("gradient");
+                navaction.classList.remove("bg-gradient-to-r");
+                navaction.classList.remove("from-emerald-700");
+                navaction.classList.remove("to-green-600");
                 navaction.classList.add("bg-white");
                 navaction.classList.remove("text-white");
                 navaction.classList.add("text-emerald-700");
@@ -624,7 +628,7 @@
             }
         });
     </script>
-    <script>
+    {{-- <script>
         /*Toggle dropdown list*/
         /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
 
@@ -662,7 +666,7 @@
             }
             return false;
         }
-    </script>
+    </script> --}}
 </body>
 
 </html>

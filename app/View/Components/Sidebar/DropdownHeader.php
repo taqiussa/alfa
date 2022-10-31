@@ -1,10 +1,10 @@
 <?php
 
-namespace App\View\Components\Sidebar\Dropdown;
+namespace App\View\Components\Sidebar;
 
 use Illuminate\View\Component;
 
-class Link extends Component
+class DropdownHeader extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class Link extends Component
      */
     public function render()
     {
-        return view('components.sidebar.dropdown.link');
+        return view('components.sidebar.dropdown-header');
     }
 }

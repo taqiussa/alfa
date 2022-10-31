@@ -8,6 +8,9 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- Logo -->
+    <link rel="icon" href="{{ asset('images/logoalfa.png') }}" type="image/png" sizes="16x16" />
+    
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
 
@@ -15,10 +18,10 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans antialiased min-h-screen lg:flex" x-data="{ open: false }">
-    <button @click="open = !open"
-        class="absolute p-1 bg-white border-2 rounded-full shadow-md sm:block focus:outline-none active:bg-emerald-400 left-3 top-10 border-emerald-700 hover:bg-emerald-200 z-10">
-        <svg x-bind:class="open ? 'rotate-90' : '-rotate-90'" class="w-4 h-4 transition-all duration-1000 transform"
+<body class="font-sans antialiased min-h-screen lg:flex" x-data="{ isOpen: false }">
+    <button @click="isOpen = !isOpen"
+        class="absolute p-1 bg-white border-2 rounded-full shadow-md sm:block focus:outline-none active:bg-emerald-400 left-3 top-10 border-white hover:bg-emerald-200 z-10">
+        <svg x-bind:class="isOpen ? 'rotate-90' : '-rotate-90'" class="w-4 h-4 transition-all duration-1000 transform"
             style="width:24px;height:24px" viewBox="0 0 24 24">
             <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
         </svg>
