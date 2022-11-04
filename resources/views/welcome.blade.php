@@ -22,7 +22,7 @@
 
 <body class="leading-normal tracking-normal text-white bg-gradient-to-r from-emerald-800 to-green-600" style="font-family: 'Source Sans Pro', sans-serif;">
     <!--Nav-->
-    <nav id="header" class="fixed top-0 z-30 w-full text-white shadow-md shadow-emerald-400">
+    <nav id="header" class="fixed top-0 z-30 w-full text-white">
         <div class="container flex flex-wrap items-center justify-between w-full py-2 mx-auto mt-0">
             <div class="flex items-center pl-4">
                 <a class="text-2xl font-bold text-white no-underline toggleColour hover:no-underline lg:text-2xl flex justify-center items-center"
@@ -68,13 +68,12 @@
                 </a>
             </div>
         </div>
-        <hr class="py-0 my-0 border-b border-gray-100 opacity-25" />
     </nav>
     <!--Hero-->
-    <div class="pt-24">
+    <div>
         <div class="container flex flex-col flex-wrap items-center justify-between px-3 mx-auto md:flex-row">
             <!--Left Col-->
-            <div class="flex flex-col items-start justify-center w-full text-center md:w-2/5 md:text-left">
+            <div class="flex flex-col items-start justify-center w-full text-center md:w-2/5 md:text-left pt-24">
                 <p class="w-full uppercase tracking-loose">portal pendaftaran santri baru</p>
                 <h1 class="my-4 text-5xl font-bold leading-tight">
                     SMP Al Musyaffa'
@@ -82,9 +81,8 @@
                 <p class="mb-8 text-2xl leading-normal">
                     Pendaftaran Santri Baru Tahun Ajaran 2023 / 2024 Belum Mulai, Silahkan Download Brosur Berikut
                 </p>
-                <a href="{{ asset('images/brosur.jpg') }}"
-                    class="px-8 py-4 mx-auto my-6 font-bold text-gray-800 transition duration-300 ease-in-out transform bg-white rounded-full shadow-lg lg:mx-0  focus:outline-none focus:shadow-outline hover:scale-105 cursor-pointer"
-                    download="brosur-smp-al-musyaffa">
+                <a href="{{ asset('documents/brosur.pdf') }}"
+                    class="px-8 py-4 mx-auto my-6 font-bold text-gray-800 transition duration-300 ease-in-out transform bg-white rounded-full shadow-lg lg:mx-0  focus:outline-none focus:shadow-outline hover:scale-105 cursor-pointer" download="brosur-smp-al-musyaffa">
                     Download
                 </a>
             </div>
@@ -628,7 +626,7 @@
             }
         });
     </script>
-    {{-- <script>
+    <script>
         /*Toggle dropdown list*/
         /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
 
@@ -666,7 +664,7 @@
             }
             return false;
         }
-    </script> --}}
+    </script>
 </body>
 
 </html>

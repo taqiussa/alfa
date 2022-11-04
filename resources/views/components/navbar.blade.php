@@ -1,4 +1,4 @@
-<div class="bg-gradient-to-r from-emerald-800 to-green-600">
+<div class="bg-gradient-to-r from-emerald-800 to-green-600 z-30 sticky top-0">
     <nav
         class="relative z-0 h-24 px-2  flex justify-end items-center -top-3">
         <span class="font-bold">Sistem Informasi Akademik</span>
@@ -6,7 +6,7 @@
     </nav>
 
     {{-- Garis Ombak --}}
-    <div class="relative -mt-12 lg:-mt-24">
+    <div class="relative -mt-8 lg:-mt-12">
         <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
